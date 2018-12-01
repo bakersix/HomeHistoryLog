@@ -1,0 +1,36 @@
+body{
+    background-image: url(/images/pagebg.jpeg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: white;
+    line-height: 1.1em;
+    font-size: 80px;
+    word-wrap: break-word;
+    text-align: start;
+}
+
+p{
+    line-height: 1.5em;
+    color: white;
+    word-wrap: break-word;
+    text-align: start;
+}
+
+#container1 {
+    margin-top: 10%;
+}
+
+
+#c1left {
+    float: left;
+    margin-left: calc((100% - 980px) * 0.5);
+    left: 11px;
+    width: 364px;
+    position: absolute;
+    pointer-events: none;
+}
+
+
