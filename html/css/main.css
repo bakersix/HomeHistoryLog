@@ -3,12 +3,11 @@
 body{
     background-image: url(/images/pagebg.jpeg);
     background-size: cover;
-    background-attach: fixed;
+    background-attachment: fixed;
     font-family: avenir, sans-serif;
 }
 
 h1{
-    color: white;
     line-height: 1.1em;
     font-size: 80px;
     word-wrap: break-word;
@@ -17,15 +16,28 @@ h1{
 
 p{
     line-height: 1.5em;
-    color: white;
     word-wrap: break-word;
     text-align: start;
 }
 
-#container1 {
-    margin-top: 10%;
+h2{
+    font-size: 46px;
+    line-height: 1.1em;
+    font-family: avenir,sans-serif;
 }
 
+#container1 {
+    margin-top: 10%;
+    height:700px;
+}
+
+#container1 h1{
+    color: white;
+}
+
+#container1 p{
+    color: white;
+}
 
 #c1left {
     float: left;
@@ -85,12 +97,35 @@ p{
     position:relative;
 }
 
-#search {
+.btn-primary {
     color:#0d1926;
     background-color: #10e698;
+}
+
+#search {
     margin-top:15px;
 }
 
-#search:hover{
+.btn-primary:hover{
     background-color:07a96e
+}
+
+#container2{
+    width:100%;
+    min-width:980px;
+    height:708px;
+    background-color:white;
+    padding-left: calc((100% - 980px) * 0.5);
+    padding-right: calc((100% - 980px) * 0.5);
+    padding-top: 60px;
+}
+
+#container2 h2{
+    color: #2F4A69;
+}
+
+#c2smalltext{
+    width:45%;
+    color:#182d4596;
+    margin:15px;
 }

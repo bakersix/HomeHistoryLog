@@ -11,6 +11,13 @@
 				$("#c1left").delay(300).fadeIn();
 				$("#c1rborder").delay(800).fadeIn();
 				$("#c1raddrsearch").delay(1100).fadeIn();
+				$("#c2inner").delay(1500).fadeIn();
+				$('#resultsWindow').on('hidden.bs.modal', function () {
+					$("#c1raddrsearchbox").disabled = false;
+					$("#windowLabel").html("Plesae wait...");
+					$("#windowBody").html("Please wait while we look up the home information...");
+					$("#windowFooter").html('<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>');
+				});
 			}
 
 			function addr_search(value){
@@ -26,6 +33,18 @@
 					}
 					$("#c1raddrsearchbox").autocomplete({source: tags});
 				});
+			}
+
+			function get_home_info(){
+				var addr = $("#c1raddrsearchbox").val();
+                                $("#c1raddrsearchbox").disabled = true;
+				setTimeout(function() { populate_window(addr); }, 2500);
+			}
+
+			function populate_window(addr){
+				$("#windowLabel").html("Documents have been found");
+				$("#windowBody").html("We have found 5 documents for the property at " + addr + ". Please login or sign up to access this information");
+				$("#windowFooter").html('<button type="button" class="btn btn-primary">Login/Sign Up</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>');
 			}
 		</script>
 	</head>
@@ -47,7 +66,43 @@
 					</div>
 					<div id="c1rbottom">
 						<input style="width:342px;" id="c1raddrsearchbox" class="form-control" type="text" onkeyup="addr_search(this.value)" placeholder="Enter your address to get started" />
-						<button id="search" type="button" class="btn btn-primary">Search</button>
+						<button id="search" type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsWindow" onClick="get_home_info()">Search</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="container2">
+			<div id="c2inner" style="display:none;">
+				<h2>PROPERTY INFORMATION YOU CAN EXPECT TO FIND</h2>
+
+				<div id="c2smalltext">
+					<p>WONDERING IF YOU STILL HAVE A WARRANTY ON THE NEW WINDOWS YOU INSTALLED A FEW YEARS AGO?   FORGOT WHO EVEN INSTALLED THOSE WINDOWS?</p>
+
+
+					<p>DOES THE HOME HAVE ANY REGISTERED OR TRANSFERRABLE PRODUCT WARRANTIES?  ARE THERE ORIGINAL BLUEPRINTS AVAILABLE?  WHEN WAS THE LAST TIME MAINTENANCE WAS COMPLETED ON THE SEPTIC SYSTEM?</p>
+
+				
+					<p>THESE ARE JUST A  FEW EXAMPLES. HHL IS SERVING AS A WAY TO DOCUMENT MAINTENANCE OR NEW WORK COMPLETED ON THE HOME</p>
+
+
+					<p>REGISTERED WARRANTIES, OPERATION AND MAINTENANCE MANUALS AND SCOPE OF WORK RECEIPTS ARE ITEMS THAT THE CONTRACTOR WILL ENTER UPON WORK COMPLETION  HOMEWOWNERS WILL ALSO BE ABLE TO ENTER ANY WORK THEY HAVE COMPLETED ON THE HOME</p>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="resultsWindow" tabindex="-1" role="dialog" aria-labelledby="windowLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="windowLabel">Please wait...</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						 </button>
+					</div>
+					<div id="windowBody" class="modal-body">
+						Please wait while we look up the home information...
+					</div>
+					<div id="windowFooter" class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 					</div>
 				</div>
 			</div>
