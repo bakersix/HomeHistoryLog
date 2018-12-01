@@ -3,6 +3,7 @@
 body{
     background-image: url(/images/pagebg.jpeg);
     background-size: cover;
+    background-attach: fixed;
     font-family: avenir, sans-serif;
 }
 
@@ -45,7 +46,7 @@ p{
 #c1right span{
     color: #10e698;
     font-size: 38px;
-    line-height: 1em;
+    line-height: 1.1em;
     font-family: avenir,sans-serif;
 }
 
@@ -53,7 +54,7 @@ p{
     background-color: rgba(13, 25, 38, 1);
     width: 498px;
     height: 555px;
-    top: 95px;
+    top: -500px;
     position: relative;
 }
 
@@ -73,4 +74,23 @@ p{
 
 .ui-menu {
     font-family: avenir,sans-serif;
+}
+
+#c1rborder {
+    border: 10px solid white;
+    width:498px;
+    height:555px;
+    top:25px;
+    left:75px;
+    position:relative;
+}
+
+#search {
+    color:#0d1926;
+    background-color: #10e698;
+    margin-top:15px;
+}
+
+#search:hover{
+    background-color:07a96e
 }
