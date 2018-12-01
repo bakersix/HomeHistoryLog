@@ -1,3 +1,5 @@
+@font-face { font-family: avenir; src: url('/fonts/AvenirLTStd-Heavy.otf'); } 
+
 body{
     background-image: url(/images/pagebg.jpeg);
     background-size: cover;
@@ -33,4 +35,28 @@ p{
     pointer-events: none;
 }
 
+#c1right {
+    float: right;
+    width: 25%;
+    height: 300px;
+    margin-right: calc((100% - 980px) * 0.5);
+}
 
+#c1right span{
+    color: #10e698;
+    font-size: 38px;
+    line-height: 1em;
+    font-family: avenir,sans-serif;
+}
+
+#c1raddrsearch {
+    background-color: rgba(13, 25, 38, 1);
+    width: 498px;
+    height: 555px;
+    top: 95px;
+    position: relative;
+}
+
+#c1rtext {
+    padding:30px;
+}
