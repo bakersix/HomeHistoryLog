@@ -26,6 +26,14 @@ h2{
     font-family: avenir,sans-serif;
 }
 
+.bg-dark{
+    background-color: rgba(13, 25, 38, 1)!important;
+}
+
+#navbarLoginDiv{
+    margin-left:75%;
+}
+
 #container1 {
     margin-top: 10%;
     height:700px;
@@ -104,6 +112,7 @@ h2{
 
 #search {
     margin-top:15px;
+    width:130px;
 }
 
 .btn-primary:hover{
@@ -129,3 +138,4 @@ h2{
     color:#182d4596;
     margin:15px;
 }
+
